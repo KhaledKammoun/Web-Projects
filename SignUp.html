@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SignUp - Spotify</title>
+	</head>
+	<body>
+	<h1>SignUp</h1>
+	<form>
+		<input  name="name" id="name" required maxlength="10" placeholder="First name" required > 
+
+		<input  name="name" id="name" required maxlength="10" placeholder="Last name"><br><br>
+
+		<input id="email" name="email"value="@gmail.com" pattern="[a-zA-Z0-9._%+-]+@gmail.com"  placeholder="email" required><br><br>
+
+		<input id="pass" name="pass" type="password" required placeholder="New password"><br><br>
+
+		<input id="pass1" name="pass1" type="password" required  placeholder="Confirm New password"><br><br>
+
+		<label>Birthdate : </label>
+		<input type="date" name="date" max="2004-01-01" min="1988-01-01" required><br>
+
+		<h4 for="Gender">Gender</h4>
+		<label for="female">Female</label>
+		<input id="female" type="radio" name="Gender" required> 
+		<label for="male">Male</label>
+		<input id="male" type="radio" name="Gender" required>
+
+		<input type="submit" > <input type="reset" name="Reset">
+		<br><br>
+		<a href="music.html"><input type="button" value="Sign Up"></a>
+	</form>
+	</body>
+</html>

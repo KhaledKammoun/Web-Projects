@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Spotify</title>
+	</head>
+	<body>
+		<a href="LogIn.html"><input type="button" value="LogIn"></a>
+		<a href="SignUp.html"><input type="button" value="SignUp"></a>
+		<br><br>
+		<label for="music-select">Select a song:</label>
+		<select id="music-select" onchange="document.querySelector('audio').src = this.value">
+		    <option value="adel - i set fire to the rain.mp3" >Adel - I set fire to the rain</option>
+		    <option value="Ed Sheeran - Shape of You.mp3">Ed Sheeran - Shape of You</option>
+		</select>
+		<br><br>
+		<audio controls>
+		    <source  src="adel - i set fire to the rain.mp3" type="audio/mpeg">
+		</audio>
+		<br><br>
+		<ol type="I">
+		  <li >Level 1
+		    <ol>
+		      <li>prog 1
+		        <ol type="a">
+		          <li>rec</li>
+		          <li>comparative</li>
+		        </ol>
+		      </li>
+		      <li>prog 2</li>
+		    </ol>
+		  </li>
+		  <li>Niveau 2
+		    <ol>
+		      <li>prog 1</li>
+		      <li>prog 2</li>
+		    </ol>
+		  </li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background:url(https://res.cloudinary.com/practicaldev/image/fetch/s--BuPz-p40--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png);
+  background-size: 50%;
+  background-position: left center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+form {
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color:black;
+}
+
+input,
+textarea,
+select {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Specific styles */
+#survey-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#name-label,
+#email-label,
+#number-label {
+  display: flex;
+  flex-direction: column;
+}
+
+#name-label,
+#email-label {
+  width: 100%;
+}
+
+#name,
+#email {
+  width: 100%;
+}
+
+#dropdown {
+  width: 100%;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+#unique-par{
+  font-size: 1.5rem;
+  text-align: center;
+  color:black;
+}

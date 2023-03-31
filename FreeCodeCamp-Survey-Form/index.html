@@ -7,38 +7,41 @@
     <meta >
   </head>
   <body>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <form id="survey-form">
-      <label id="name-label">Name<input id="name" type="text" placeholder="Enter your name" required/></label>
-      <label id="email-label">Email<input id="email" type="email" placeholder="Enter your Email" required/></label>
-      <label id="number-label">Age
-(optional)<input id="number" type="number" placeholder="Age" min="10" max="99" required/></label>
-      <label>Which option best describes your current role?
-        <select id="dropdown">
-          <option disabled selected>Select current role</option>
-          <option value="student">Student</option>
-          <option value="full-time-job">Full Time Job</option>
-          <option value="full-time-learner">Full Time Learner</option>
-          <option value="prefer-not-to-say">Prefer not to say</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
-      <label>Would you recommend freeCodeCamp to a friend?
-        <label><input value="definitely" name="rad" type="radio" class="inline" checked>Definitely</label>
-        <label><input value="maybe" name="rad" type="radio" class="inline">Maybe</label>
-        <label><input value="not-sure" name="rad" type="radio" class="inline">Not sure</label>
-      </label>
-      <label>What would you like to see improved? (Check all that apply)
-        <label><input value="front-end"type="checkbox" class="inline">Front-end Projects</label>
-        <label><input value="back-end"type="checkbox" class="inline">Back-end Projects</label>
-        <label><input value="forum" type="checkbox" class="inline">Forum</label>
-        <label><input value="add"type="checkbox" class="inline">Additional Courses</label>
-      </label>
-      <label>Any comments or suggestions?<textarea type="textarea" placeholder="Enter your comment here..." rows="6" cols="40"></textarea></label>
-      <input type="submit" id="submit"/>
-    </form>
-  
-  
+    <div id="particles-js">
+      <div class="form-class">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <form id="survey-form">
+          <label id="name-label">Name<input id="name" type="text" placeholder="Enter your name" required/></label>
+          <label id="email-label">Email<input id="email" type="email" placeholder="Enter your Email" required/></label>
+          <label id="number-label">Age
+    (optional)<input id="number" type="number" placeholder="Age" min="10" max="99" required/></label>
+          <label>Which option best describes your current role?
+            <select id="dropdown">
+              <option disabled selected>Select current role</option>
+              <option value="student">Student</option>
+              <option value="full-time-job">Full Time Job</option>
+              <option value="full-time-learner">Full Time Learner</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>Would you recommend freeCodeCamp to a friend?
+            <label><input value="definitely" name="rad" type="radio" class="inline" checked>Definitely</label>
+            <label><input value="maybe" name="rad" type="radio" class="inline">Maybe</label>
+            <label><input value="not-sure" name="rad" type="radio" class="inline">Not sure</label>
+          </label>
+          <label>What would you like to see improved? (Check all that apply)
+            <label><input value="front-end"type="checkbox" class="inline">Front-end Projects</label>
+            <label><input value="back-end"type="checkbox" class="inline">Back-end Projects</label>
+            <label><input value="forum" type="checkbox" class="inline">Forum</label>
+            <label><input value="add"type="checkbox" class="inline">Additional Courses</label>
+          </label>
+          <label>Any comments or suggestions?<textarea type="textarea" placeholder="Enter your comment here..." rows="6" cols="40"></textarea></label>
+          <input type="submit" id="submit"/>
+        </form>
+      </div>
+    </div>
   </body>
-
+  <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </html>

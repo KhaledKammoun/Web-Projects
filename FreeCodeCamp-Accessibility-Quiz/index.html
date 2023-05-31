@@ -13,17 +13,35 @@
       <h1>HTML/CSS Quiz</h1>
       <nav>
         <ul>
-          <li><a>INFO</a></li>
-          <li><a>HTML</a></li>
-          <li><a>CSS</a></li>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
-        <section role="region"></section>
-        <section role="region"></section>
-        <section role="region"></section>
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.</label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+        </section>
       </form>
     </main>
   </body>

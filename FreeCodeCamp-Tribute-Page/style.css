@@ -5,3 +5,48 @@
   justify-content:center ;
   align-items: center;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#introduction{
+  font-family: "Roboto", Arial, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+
+}
+#img-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#img-caption {
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+}
+#tribute-info {
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 10px;
+}

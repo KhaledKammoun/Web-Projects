@@ -67,53 +67,134 @@ Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="variables"></p>
+      <header>Variables</header>
+      <p id="variables">You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+
+<br><br>
+A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+
+<br><br>
+You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.
+
+</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="declaring_variables"></p>
+      <header>Declaring variables</header>
+      <p id="declaring_variables">You can declare a variable in three ways:
+<br><br>With the keyword var. For example,
+<br><br><code>var x = 42.</code><br><br>This syntax can be used to declare both local and global variables.
+<br><br>By simply assigning it a value. For example,<br><br><code>x = 42.</code><br><br>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.<br><br>With the keyword let. For example,<br><br><code>let y = 13.</code><br><br>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="variable_scope"></p>
+      <header>Variable scope</header>
+      <p id="variable_scope">When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.<br><br>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.<br><br><code>if (true) { var x = 5; } console.log(x); // 5</code><br><br>This behavior changes, when using the let declaration introduced in ECMAScript 2015.<code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is<br>not defined</code></p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="global_variables"></p>
+      <header>Global variables</header>
+      <p id="global_variables">Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.<br><br>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.
+</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="constants"></p>
+      <header>Constants</header>
+      <p id="constants">You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.<br><br>
+
+<code>const PI = 3.14;</code><br><br>
+A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.<br><br>
+
+The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.<br><br>
+
+You cannot declare a constant with the same name as a function or variable in the same scope. For example:<br><br>
+<code>
+// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS<br>
+WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;<br>
+//statements }</code><br><br>
+However, object attributes are not protected, so the following statement is executed without problems.<br><br><code>
+const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+"otherValue";</code></p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="data_types"></p>
+      <header>Data types</header>
+      <p id="data_types">The latest ECMAScript standard defines seven data types:<br><br>
+<ul>
+<li>Six data types that are primitives:</li>
+<ul>
+<li>Boolean. true and false.</li>
+<li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+<li>undefined. A top-level property whose value is undefined.</li>
+<li>Number. 42 or 3.14159.</li>
+<li>String. "Howdy"</li>
+<li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li></ul>
+<li>and Object</li>
+</ul>
+Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="if_else_statement"></p>
+      <header>if...else statement</header>
+      <p id="if_else_statement">Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:<br><br><code>
+if (condition) { statement_1; } else { statement_2; }<code><br><br>
+condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.<br><br>
+You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:<br><br>
+<code>
+if (condition_1) { statement_1; } else if (condition_2) {<br><br>
+statement_2; } else if (condition_n) { statement_n; } else {<br><br>
+statement_last; }</code><br><br>
+In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:<br><br>
+<code>
+if (condition) { statement_1_runs_if_condition_is_true;<br><br>
+statement_2_runs_if_condition_is_true; } else {<br><br>
+statement_3_runs_if_condition_is_false;<br><br>
+statement_4_runs_if_condition_is_false; }<br><br></code>
+It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:<br><br>
+<code>if (x = y) { /* statements here */ }<br><br></code>
+If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:<br><br><code>
+if ((x = y)) { /* statements here */ }</code></p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="while_statement"></p>
+      <header>while statement</header>
+      <p id="while_statement">A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:<br><br><code>
+while (condition) statement</code>
+If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.<br><br>
+The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.<br><br>
+
+To execute multiple statements, use a block statement ({ ... }) to group those statements.<br><br>
+
+Example:<br><br>
+The following while loop iterates as long as n is less than three:<br><br>
+<code>
+var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
+With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:<br>
+<ul>
+<li>After the first pass: n = 1 and x = 1</li><br>
+<li>After the second pass: n = 2 and x = 3</li><br>
+<li>After the third pass: n = 3 and x = 6</li><br></ul>
+After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="Function_declarations"></p>
+      <header>Function declarations</header>
+      <p id="Function_declarations">A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:<ul>
+<li>The name of the function.</li><br>
+<li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li><br>
+<li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li></ul>
+For example, the following code defines a simple function named square:<br><br>
+<code>
+function square(number) { return number * number; }</code><br><br>
+The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+<br><br><code>
+return number * number;</code>
+Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
     </section>
 
     <section class="main-section">
-      <header></header>
-      <p id="reference"></p>
+      <header>Reference</header>
+      <p id="reference"><ul><li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></li></ul></p>
     </section>
   </main>
 </body>

@@ -1,0 +1,45 @@
+body {
+    font-family: 'Bebas Neue', 'Arial', sans-serif;
+    background-color: #232323;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image {
+    width: 30%;
+    margin-right: 20px;
+    max-width: 400px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content {
+    flex-grow: 1;
+    width: 70%;
+}
+
+#author {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#quote {
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.green-start {
+    color: green;
+    font-size: 1.2em;
+}

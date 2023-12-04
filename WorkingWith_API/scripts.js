@@ -17,5 +17,20 @@ async function get(){
     new_query = words.map(word => `<span class="green-start">${word[0]}</span>${word.slice(1)}`).join(' ');
     document.querySelector("#author").innerHTML = new_query;
     document.querySelector("#quote").innerHTML = data[0].quote;
+    document.querySelector("#actor").innerHTML = `
+      <form>
+        <select id="actorSelect">
+          ${data[0].quote.split(' ').map(word => `<option value="${word}">${word}</option>`)}
+        </select>
+      </form>
+    `
+    function updateAuthor(){
+      document.querySelector("#author").innerHTML = document.querySelector("#actorSelect").value
+    }
+
+    document.querySelector("#actorSelect").addEventListener("change",function(){
+      updateAuthor() ;
+    })
+
 }
 get()

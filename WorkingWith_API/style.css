@@ -4,7 +4,15 @@ body {
     color: #fff;
     margin: 0;
 }
-
+select{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: green;
+    background-color: #fff;
+    margin-left: 100px;
+    margin-top: 10px;
+    padding: 3px;
+}
 .container {
     display: flex;
     align-items: center;

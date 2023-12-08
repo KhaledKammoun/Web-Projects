@@ -1,28 +1,29 @@
 .container{
     background-color: #01bfbf;
     width: 300px;
-    height: 420px;
+    height: 432px;
     max-width: 300px;
-    max-height: 420px;
+    max-height: 450px;
     padding: 5px;
     padding-bottom: 20px;
     border-radius: 10px;
 }
 
 .title{
-    background-color: black;
     color: white;
     width: 60px;
     height: auto;
     margin-left: auto;
-    margin-right: 10px;    
+    margin-right: 28px;
 }
 
 .title > p {
     text-align: center;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    letter-spacing: 1.5px;
+    text-shadow: 2.5px 2.3px 0px rgba(26, 14, 14, 0.4);
 }
 
 .result {

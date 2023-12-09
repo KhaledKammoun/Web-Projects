@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
+    
     var keysContainer = document.querySelector(".keys");
     var previous_result_var = ""
     var new_equation = false
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // add the previous answer to the equation
             if (clickedElement.textContent === "ANS")
                 document.querySelector(".result #result").innerHTML += previous_result_var
+            else if (clickedElement.textContent === "−")
+                document.querySelector(".result #result").innerHTML += "-";
             else
                 document.querySelector(".result #result").innerHTML += clickedElement.textContent;
         }
@@ -69,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         // if the user press the equal button
-        if (clickedElement.textContent === "="){
+        if (clickedElement.textContent === "=" && document.querySelector("#result").textContent != ""){
             if (validEquation(result) === false){
                 result_var = document.querySelector("#result").textContent
                 document.querySelector("#result").textContent = "Error!"
@@ -79,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             else{
                 final_result = calculate_result(result)
+                previous_result_var = final_result
+                document.querySelector("#prev-result").textContent = result + " = " + final_result
                 document.querySelector("#result").textContent = ""
                 new_equation = true
-                previous_result_var = final_result
-                document.querySelector("#prev-result").textContent = previous_result_var
             }
         }
         else

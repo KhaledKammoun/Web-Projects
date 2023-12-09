@@ -1,0 +1,96 @@
+.container{
+    background-color: #01bfbf;
+    width: 300px;
+    height: 432px;
+    max-width: 300px;
+    max-height: 450px;
+    padding: 5px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.title{
+    color: white;
+    width: 60px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 32px;
+}
+
+.title > p {
+    text-align: center;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    letter-spacing: 1.5px;
+    text-shadow: 2.5px 2.3px 0px rgba(26, 14, 14, 0.4);
+}
+
+.result {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin: 5px ;
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.result > p {
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.result > #prev-result{
+    order: 1;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 2px; 
+    color :rgba(26, 14, 14, 0.8) ;
+}
+.result > #result {
+    order: 2;
+    margin-top: 2px;
+    padding-left: 6px;
+    font-size: 23px;  
+}
+
+.keys{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.keys > div {
+    cursor: pointer; /*Make it Button*/
+    border-radius: 7px;
+    background-color: white;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keys > div, .result {
+    box-shadow: 4px 4px 0px rgba(225, 133, 108, 0.9);
+}
+
+.container{
+    box-shadow: 7px 7px 1px rgba(229, 156, 138, 0.8);		
+}
+
+#key-0, #key-CLE, #key-ans, #key-3{
+    width: 110px;
+}
+
+#key-0, #key-point{
+    margin-top: 5px;
+    height: 50px;
+}

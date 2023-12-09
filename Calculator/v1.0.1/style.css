@@ -1,9 +1,9 @@
 .container{
     background-color: #01bfbf;
     width: 300px;
-    height: 432px;
+    height: 516px;
     max-width: 300px;
-    max-height: 450px;
+    max-height: 550px;
     padding: 5px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -26,7 +26,7 @@
     text-shadow: 2.5px 2.3px 0px rgba(26, 14, 14, 0.4);
 }
 
-.result {
+.result{
     border-radius: 10px;
     background-color: whitesmoke;
     margin: 5px ;
@@ -95,3 +95,32 @@
     height: 50px;
 }
 
+
+/*buttons U D L R*/
+#up-button, #down-button, #left-button, #right-button{
+    width : 60px ;
+    height: 18px ;
+    box-shadow: 4px 4px 0px rgba(225, 133, 108, 0.9);
+
+    cursor: pointer; /*Make it Button*/
+    border-radius: 7px;
+    background-color: white;
+    margin: 8px;
+
+}
+#up-button{
+    margin-top: 15px;
+    margin-left: 110px;
+}
+#left-button{
+    margin-left: 70px;
+    margin-top: -1px;
+}
+#right-button{
+    margin-left: 148px;
+    margin-top: -26px;
+}
+#down-button{
+    margin-left: 110px;
+    margin-top: 8px;
+}

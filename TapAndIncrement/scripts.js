@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if ((nbCount) % 20 == 0){
             document.querySelector("#result-2").innerHTML = (++nbTotal) ;
             document.querySelector("#result-1").innerHTML = 0 ;
+            nbCount = 0 ;
         }
     }) ;
 }) ;

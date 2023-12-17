@@ -2,18 +2,23 @@ body {
     background-color: rgba(223, 207, 190,0.6);
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+
 }
 .container{
     flex: 1;
-    margin-top: -390px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -20em;
+    margin-left: 20em;
+    margin-right: 20em;
+    
 }
 .result{
     display: flex;
@@ -21,7 +26,7 @@ body {
     align-items: center;
     flex-direction: row;
 }
-.button {
+.button,.newDayButton {
     background-color: skyblue;
     width: 100px;
     height: 100px;
@@ -32,14 +37,65 @@ body {
     
 }
 
-.button:hover {
+.button:hover, .newDayButton:hover, #button:hover {
     background-color: lightblue;
 }
 
-.button:active {
+.button:active, #button:active{
     background-color: rgba(20, 20, 150, 0.664);
 }
+.newDayButton:active{
+  background-color: rgba(130, 130, 187, 0.664);
+}
+.content{
+  margin: 8px;
+  
+  width: 11.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1.4em;
+  text-align: center;
+  display: flex; 
+  align-items: left;
+  flex-direction: column;
+}
 
+
+
+th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
+  
+  border-radius: 6px;
+}
+
+th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) { 
+  border-radius: 4px ;
+}
+#table-1 th,td{
+  text-align: center;
+  border : 0.10em solid #43abce ;
+  padding : 0.3em ;
+  padding-left : 0.6em ;
+  padding-right : 0.6em ;
+}
+.newDayButton{
+  height: 2.2em;
+  width: 7.1em;
+  margin-top: 0.2em;
+  border-radius: 5px ;
+  border : 3px solid rgb(12, 91, 122) ;
+}
+.newDayButton  p{
+  color: rgb(12, 91, 122);
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+#button{
+  
+  background-color: skyblue;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 1.0em;
+  font-weight: bold;
+}
 #result-1, #result-2{
     width: 100px;
     font-size: 100px;
@@ -52,43 +108,11 @@ body {
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    width: 5px;
+    width: 0.35em;
     height: 6.2em;
     background-color: rgba(0, 0, 0, 0.384);
 }
 
-.content {
-  margin-left: 0px;
-  width: 120px;
-  margin: 20px;
-  height: 335px;
-  
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
-#table-1{
-  border : 4px solid #5f93a5 ;
-  padding : 10px ;
-  border-collapse: collapse; 
-  
-}
-#table-1  tr{
-  border : 4px solid #5f93a5 ;
-
-  
-}
-#table-1  tr td{
-  
-  border : 4px solid #5f93a5 ;
-  text-align: center;
-  padding : 20px ;
-  font-size: 20px;
-}
-#table-1 tr th:hover{
-  background-color: antiquewhite;
-  padding : 20px ;
-  font-size: 20px;
-  cursor: pointer;
-}
 /*Footer*/
 footer{
     margin-top: auto;

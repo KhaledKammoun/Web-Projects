@@ -28,13 +28,12 @@ body {
 }
 .button,.newDayButton {
     background-color: skyblue;
-    width: 100px;
-    height: 100px;
+    width: 4em;
+    height: 4em;
     border-radius: 10px;
     margin-top: 30px;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    
 }
 
 .button:hover, .newDayButton:hover, #button:hover {
@@ -81,7 +80,7 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   width: 7.1em;
   margin-top: 0.2em;
   border-radius: 5px ;
-  border : 3px solid rgb(12, 91, 122) ;
+  border : 1.5px solid rgb(12, 91, 122) ;
 }
 .newDayButton  p{
   color: rgb(12, 91, 122);
@@ -96,21 +95,12 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   font-size: 1.0em;
   font-weight: bold;
 }
-#result-1, #result-2{
+#result-1{
     width: 100px;
     font-size: 100px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
-
-}
-
-#seperator{
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 0.35em;
-    height: 6.2em;
-    background-color: rgba(0, 0, 0, 0.384);
+    color:rgba(0, 0, 0, 0.781);
 }
 
 /*Footer*/

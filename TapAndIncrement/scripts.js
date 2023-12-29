@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
 
-    nbCount = 0 ;
+    nbCount = 33 * 4 ;
+    document.querySelector("#result-1").innerHTML = nbCount
     document.querySelector(".button").addEventListener("click", function(){
-        document.querySelector("#result-1").innerHTML = (++nbCount) ;
-        if ((nbCount) % 20 == 0){
-            document.querySelector("#result-1").innerHTML = 0 ;
-            nbCount = 0 ;
+        document.querySelector("#result-1").innerHTML = (--nbCount) ;
+        if (nbCount == 0){
+            nbCount = 33 * 4 ;
+            document.querySelector("#result-1").innerHTML = nbCount ;
         }
     }) ;
 

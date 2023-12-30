@@ -1,0 +1,56 @@
+body {
+    background-color: rgba(223, 207, 190,0.6);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header, .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header > div, .buttons > div{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.buttons{
+    margin-top: -150px;
+
+}
+
+.buttons > div{
+    font-size: 40px;
+    text-align: center;
+    border : 0.10em solid #43abce ;
+    border-radius: 10px;
+    padding : 0.3em ;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.time{
+
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#hour_min{
+    font-size: 200px;
+}
+#seconds{
+    font-size: 100px;
+}

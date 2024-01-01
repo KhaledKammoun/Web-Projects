@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function(){
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
 
-    nbCount = 33 * 4 ;
+    nbCount = 20 ;
     document.querySelector("#result-1").innerHTML = nbCount
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
         if (nbCount == 0){
-            nbCount = 33 * 4 ;
+            nbCount = 20;
             document.querySelector("#result-1").innerHTML = nbCount ;
         }
     }) ;

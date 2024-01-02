@@ -1,3 +1,75 @@
+/*Shake Animation*/
+@keyframes shake {
+  0%, 100% {
+    width: 100px;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.781);
+  }
+  50% {
+    width: 100px;
+
+    font-size: 115px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.781);
+  }
+}
+
+.shake {
+  animation: shake 0.1s ease-in-out;
+}
+@font-face {
+    font-family: 'me quran';
+    src: url('img/font-quran/me_quran-webfont.eot');
+    src: url('img/font-quran/me_quran-webfont.eot?#iefix') format('embedded-opentype'),
+         url('img/font-quran/me_quran-webfont.woff') format('woff'),
+         url('img/font-quran/me_quran-webfont.ttf') format('truetype'),
+         url('img/font-quran/me_quran-webfont.svg#mequranRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PDMS Saleem QuranFont';
+    src: url('img/font-quran/pdms_saleem-webfont.eot');
+    src: url('img/font-quran/pdms_saleem-webfont.eot?#iefix') format('embedded-opentype'),
+         url('img/font-quran/pdms_saleem-webfont.woff') format('woff'),
+         url('img/font-quran/pdms_saleem-webfont.ttf') format('truetype'),
+         url('img/font-quran/pdms_saleem-webfont.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KFGQPC Uthman Taha Naskh';
+    src: url('img/font-quran/kfc_naskh-webfont.eot');
+    src: url('img/font-quran/kfc_naskh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('img/font-quran/kfc_naskh-webfont.woff') format('woff'),
+         url('img/font-quran/kfc_naskh-webfont.ttf') format('truetype'),
+         url('img/font-quran/kfc_naskh-webfont.svg#KFGQPCUthmanTahaNaskhRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Scheherazade';
+    src: url('img/font-quran/scheherazade-webfont.eot');
+    src: url('img/font-quran/scheherazade-webfont.eot?#iefix') format('embedded-opentype'),
+         url('img/font-quran/scheherazade-webfont.woff') format('woff'),
+         url('img/font-quran/scheherazade-webfont.ttf') format('truetype'),
+         url('img/font-quran/scheherazade-webfont.svg#ScheherazadeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'XB Zar';
+    src: url('img/font-quran/xb_zar-webfont.eot');
+    src: url('img/font-quran/xb_zar-webfont.eot?#iefix') format('embedded-opentype'),
+         url('img/font-quran/xb_zar-webfont.woff') format('woff'),
+         url('img/font-quran/xb_zar-webfont.ttf') format('truetype'),
+         url('img/font-quran/xb_zar-webfont.svg#XBZarRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     background-color: rgba(223, 207, 190,0.6);
     margin: 0;
@@ -58,7 +130,10 @@ body {
   flex-direction: column;
 }
 
-
+th{
+  font-family:'KFGQPC Uthman Taha Naskh', 'PDMS Saleem QuranFont';
+  
+}
 
 th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
   

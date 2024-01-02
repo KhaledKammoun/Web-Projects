@@ -5,14 +5,19 @@ document.addEventListener("DOMContentLoaded", function(){
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
 
-    nbCount = 20 ;
+    nbCount = 100 * 4 ;
     document.querySelector("#result-1").innerHTML = nbCount
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
         if (nbCount == 0){
-            nbCount = 20;
+            nbCount = 100 * 8;
             document.querySelector("#result-1").innerHTML = nbCount ;
         }
+        const resultElement = document.getElementById('result-1');
+        resultElement.classList.add('shake');
+        setTimeout(() => {
+            resultElement.classList.remove('shake');
+          }, 100);
     }) ;
 
 

@@ -81,33 +81,24 @@ body {
 
 }
 .container{
-    flex: 1;
-    
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: -20em;
-    margin-left: 20em;
-    margin-right: 20em;
-    
+    margin-top: 320px;
 }
-.result{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
+
 .button,.newDayButton {
     background-color: skyblue;
     width: 4em;
     height: 4em;
     border-radius: 10px;
-    margin-top: 30px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
-
+.button{
+  margin-top: 130px;
+  position: fixed;
+}
 .button:hover, .newDayButton:hover, #button:hover {
     background-color: lightblue;
 }
@@ -119,59 +110,64 @@ body {
   background-color: rgba(130, 130, 187, 0.664);
 }
 .content{
+  position: fixed;
+  right: 0px;
   margin: 8px;
-  
-  width: 18.5em;
+  width: 26em;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 1.4em;
-  text-align: center;
-  display: flex; 
-  align-items: left;
-  flex-direction: column;
+  text-align: right;
 }
-
+#table-1 th,td{
+  text-align: right;
+  border : 0.10em solid #43abce ;
+  padding : 0.3em ;
+  padding-left : 0.6em ;
+  padding-right : 0.6em ;
+}
+td{
+  text-align: center ;
+}
 th{
   font-family:'KFGQPC Uthman Taha Naskh', 'PDMS Saleem QuranFont';
-  
 }
 
 th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
-  
   border-radius: 6px;
 }
 
 th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) { 
   border-radius: 4px ;
 }
-#table-1 th,td{
-  text-align: center;
-  border : 0.10em solid #43abce ;
-  padding : 0.3em ;
-  padding-left : 0.6em ;
-  padding-right : 0.6em ;
-}
+
 .newDayButton{
+  position: fixed;
+  right: 36px;
   height: 2.2em;
   width: 7.1em;
   margin-top: 0.2em;
   border-radius: 5px ;
   border : 1.5px solid rgb(12, 91, 122) ;
+  text-align: center;
 }
 .newDayButton  p{
   color: rgb(12, 91, 122);
+  
   font-weight: bold;
   margin-top: 0.5em;
 }
 #button{
-  
+
   background-color: skyblue;
   transition: background-color 0.3s ease;
   cursor: pointer;
   font-size: 1.0em;
   font-weight: bold;
+  
 }
 #result-1{
-    width: 100px;
+    
+    width: 160px;
     font-size: 100px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;

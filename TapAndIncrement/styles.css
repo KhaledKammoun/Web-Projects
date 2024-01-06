@@ -1,14 +1,14 @@
 /*Shake Animation*/
 @keyframes shake {
   0%, 100% {
-    width: 100px;
+    
     font-size: 100px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
     color:rgba(0, 0, 0, 0.781);
   }
   50% {
-    width: 100px;
+    
 
     font-size: 115px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
@@ -96,8 +96,11 @@ body {
     cursor: pointer;
 }
 .button{
-  margin-top: 130px;
+  margin-top: 50px;
   position: fixed;
+  left: 40%;
+  bottom: 12%;
+  position: absolute;
 }
 .button:hover, .newDayButton:hover, #button:hover {
     background-color: lightblue;
@@ -113,7 +116,7 @@ body {
   position: fixed;
   right: 0px;
   margin: 8px;
-  width: 26em;
+  width: 30em;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 1.4em;
   text-align: right;
@@ -128,9 +131,19 @@ body {
 td{
   text-align: center ;
 }
-th{
+th, #content_string{
   font-family:'KFGQPC Uthman Taha Naskh', 'PDMS Saleem QuranFont';
 }
+
+th {
+  transition: background-color 0.5s ease;
+}
+
+th:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
 
 th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
   border-radius: 6px;
@@ -165,15 +178,78 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   font-weight: bold;
   
 }
-#result-1{
-    
-    width: 160px;
-    font-size: 100px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    text-align: center;
-    color:rgba(0, 0, 0, 0.781);
+
+
+
+/*Content Label Design*/
+.content_lable{
+  margin: 10px;
+  background-color: #43abce;
+  width: 400px;
+  height: 400px;
+  border-radius: 6px;
+  position: relative;
+  border : 0.15em solid #16404e ;
+}
+#content_close{
+  color: antiquewhite;
+  background-color: #16404e;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+#content_close > p::after {
+  font-family:'Times New Roman', Times, serif;
+  content: "\00d7";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+}
+#content_string{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px;
+  text-align: center;
+  height: 110px;
+  max-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#seperator{
+  position: fixed;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 5px;
+  background-color: #0e2d3844;
+}
+
+#result-1{
+  width: 160px;
+  font-size: 100px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  text-align: center;
+
+  
+  color:rgba(0, 0, 0, 0.781);
+  position: fixed;
+  left: 30%;
+  bottom: 32%;
+  position: absolute;
+}
 /*Footer*/
 footer{
     margin-top: auto;

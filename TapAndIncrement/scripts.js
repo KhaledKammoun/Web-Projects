@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
 
-    nbCount = 100 ;
+    nbCount = 110;
     document.querySelector("#result-1").innerHTML = nbCount
+    
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
         if (nbCount == 0){
-            nbCount = 100;
+            nbCount = 200;
             document.querySelector("#result-1").innerHTML = nbCount ;
         }
         const resultElement = document.getElementById('result-1');
@@ -44,5 +45,42 @@ document.addEventListener("DOMContentLoaded", function(){
     changeValues("Plus") ;
 
 
+    // show the lable :
+    const thElements = document.querySelectorAll('th');
+    const contentLabel = document.querySelector('.content_lable');
+    const contentString = document.getElementById('content_string');
+    const contentClose = document.getElementById('content_close');
+
+    thElements.forEach((th) => {
+        th.addEventListener("click", function () {
+            const thContent = this.textContent.trim();
+            contentString.textContent = thContent;
+            adjustFontSizeToFit();
+            showContentLabel();
+        });
+    });
+    contentClose.addEventListener("click", function () {
+        hideContentLabel();
+    });
+    function showContentLabel() {
+        contentLabel.style.display = 'block';
+    }
+
+    function hideContentLabel() {
+        contentLabel.style.display = 'none';
+    }
+
+    function adjustFontSizeToFit() {
+        const maxHeight = 110; // Set your desired max height
+        const originalFontSize = 30; // Set your default font size
+
+        contentString.style.fontSize = originalFontSize + 'px';
+        const contentHeight = contentString.scrollHeight;
+
+        while (contentHeight > maxHeight && parseFloat(contentString.style.fontSize) > 1) {
+            contentString.style.fontSize = (parseFloat(contentString.style.fontSize) - 1) + 'px';
+            contentHeight = contentString.scrollHeight;
+        }
+    }
 }) ;
 

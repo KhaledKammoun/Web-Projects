@@ -80,12 +80,6 @@ body {
     flex-direction: column;
 
 }
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 320px;
-}
 
 .button,.newDayButton {
     background-color: skyblue;
@@ -179,18 +173,40 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   
 }
 
-
+.blur-content {
+  filter: blur(8px); /* Adjust the blur effect as needed */
+  pointer-events: none ;
+}
 
 /*Content Label Design*/
-.content_lable{
-  margin: 10px;
+.content_lable {
   background-color: #43abce;
   width: 400px;
   height: 400px;
   border-radius: 6px;
-  position: relative;
-  border : 0.15em solid #16404e ;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Initial scale and position */
+  border: 0.15em solid #16404e;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Simplified transitions for opacity and transform */
 }
+
+/* Add a class to show the content label */
+.content_lable.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Final scale and position */
+  transition-duration: 0.2s;
+}
+.content_lable.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition-duration: 0.2s;
+}
+
+
 #content_close{
   color: antiquewhite;
   background-color: #16404e;

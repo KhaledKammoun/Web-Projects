@@ -50,26 +50,44 @@ document.addEventListener("DOMContentLoaded", function(){
     const contentLabel = document.querySelector('.content_lable');
     const contentString = document.getElementById('content_string');
     const contentClose = document.getElementById('content_close');
-
+    const contentWrapper = document.querySelector('.content');
     thElements.forEach((th) => {
         th.addEventListener("click", function () {
             const thContent = this.textContent.trim();
             contentString.textContent = thContent;
             adjustFontSizeToFit();
             showContentLabel();
+            applyBlur() ;
         });
     });
     contentClose.addEventListener("click", function () {
         hideContentLabel();
     });
     function showContentLabel() {
+        
         contentLabel.style.display = 'block';
+        setTimeout(() => {
+            contentLabel.classList.add('show'); // Add the 'show' class after a short delay
+            overlay.style.display = 'block';
+        }, 50); // Adjust the delay as needed
     }
 
     function hideContentLabel() {
+    contentLabel.classList.remove('show');
+    contentLabel.classList.add('hide'); // Add the 'hide' class for the hiding animation
+    setTimeout(() => {
         contentLabel.style.display = 'none';
+        contentLabel.classList.remove('hide'); // Remove the 'hide' class after the hiding animation
+        removeBlur();
+    }, 50); // Adjust the delay to match the transition duration
+}
+    function applyBlur() {
+        contentWrapper.classList.add('blur-content');
     }
-
+    
+    function removeBlur() {
+        contentWrapper.classList.remove('blur-content');
+    }
     function adjustFontSizeToFit() {
         const maxHeight = 110; // Set your desired max height
         const originalFontSize = 30; // Set your default font size

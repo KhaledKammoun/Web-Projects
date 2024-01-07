@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(){
-    var tab_salat = [0, 0, 0, 0, 0];
+    var tab_salat = [0, 0, 0, 0, 0, 0];
     var trElements = document.querySelectorAll("#table-1 tr");
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 6; i++) {
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
-
-    nbCount = 110;
-    document.querySelector("#result-1").innerHTML = nbCount
+    var varCount, nbCount;
     
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
         if (nbCount == 0){
-            nbCount = 200;
-            document.querySelector("#result-1").innerHTML = nbCount ;
+            nbCount = varCount;
+            document.querySelector("#result-1").innerHTML = varCount ;
         }
         const resultElement = document.getElementById('result-1');
         resultElement.classList.add('shake');
@@ -51,13 +49,18 @@ document.addEventListener("DOMContentLoaded", function(){
     const contentString = document.getElementById('content_string');
     const contentClose = document.getElementById('content_close');
     const contentWrapper = document.querySelector('.content');
-    thElements.forEach((th) => {
+    thElements.forEach((th, i) => {
         th.addEventListener("click", function () {
             const thContent = this.textContent.trim();
             contentString.textContent = thContent;
             adjustFontSizeToFit();
             showContentLabel();
             applyBlur() ;
+            var tab = [20, 20, 33, 100, 100, 100];
+            console.log(i) ;
+            document.querySelector("#result-1").innerHTML = tab[i] * tab_salat[i].textContent;
+            varCount = tab[i] * tab_salat[i].textContent;
+            nbCount = varCount ;
         });
     });
     contentClose.addEventListener("click", function () {
@@ -68,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function(){
         contentLabel.style.display = 'block';
         setTimeout(() => {
             contentLabel.classList.add('show'); // Add the 'show' class after a short delay
-            overlay.style.display = 'block';
         }, 50); // Adjust the delay as needed
     }
 

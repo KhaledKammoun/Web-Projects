@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function(){
     var tab_salat = [0, 0, 0, 0, 0, 0];
     var trElements = document.querySelectorAll("#table-1 tr");
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < tab_salat.length; i++) {
         tab_salat[i] = trElements[i].querySelector('.val'+ i.toString());
     }
     var varCount, nbCount;
-    
+    var val_tab, val_tab_index ;
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
         if (nbCount == 0){
             nbCount = varCount;
             document.querySelector("#result-1").innerHTML = varCount ;
+        }
+        if (tab_salat[val_tab_index].textContent > 0 && nbCount % val_tab == 0) {
+            tab_salat[val_tab_index].textContent-- ;
         }
         const resultElement = document.getElementById('result-1');
         resultElement.classList.add('shake');
@@ -21,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     document.querySelector(".newDayButton").addEventListener("click", function(){
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < tab_salat.length; i++) {
             tab_salat[i].innerHTML++;
         }
     })
 
     function changeValues(variable){
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 6; i++) {
             (function(index) {
                 document.querySelector('.button'+variable+'Val' + index.toString()).addEventListener("click", function() {
                     if (variable == "Plus")
@@ -60,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function(){
             console.log(i) ;
             document.querySelector("#result-1").innerHTML = tab[i] * tab_salat[i].textContent;
             varCount = tab[i] * tab_salat[i].textContent;
+            val_tab = tab[i] ;
+            val_tab_index = i ;
             nbCount = varCount ;
         });
     });
@@ -93,14 +98,16 @@ document.addEventListener("DOMContentLoaded", function(){
     function adjustFontSizeToFit() {
         const maxHeight = 110; // Set your desired max height
         const originalFontSize = 30; // Set your default font size
-
+    
         contentString.style.fontSize = originalFontSize + 'px';
-        const contentHeight = contentString.scrollHeight;
-
+        let contentHeight = contentString.scrollHeight;
+    
         while (contentHeight > maxHeight && parseFloat(contentString.style.fontSize) > 1) {
-            contentString.style.fontSize = (parseFloat(contentString.style.fontSize) - 1) + 'px';
+            const currentFontSize = parseFloat(contentString.style.fontSize);
+            contentString.style.fontSize = (currentFontSize - 3) + 'px';
             contentHeight = contentString.scrollHeight;
         }
     }
+    
 }) ;
 

@@ -8,14 +8,34 @@ document.addEventListener("DOMContentLoaded", function(){
     var val_tab, val_tab_index ;
     document.querySelector(".button").addEventListener("click", function(){
         document.querySelector("#result-1").innerHTML = (--nbCount) ;
+        
         if (nbCount == 0){
             nbCount = varCount;
             document.querySelector("#result-1").innerHTML = varCount ;
         }
         if (tab_salat[val_tab_index].textContent > 0 && nbCount % val_tab == 0) {
             tab_salat[val_tab_index].textContent-- ;
+            
+            document.querySelector("#result-2").innerHTML = tab_salat[val_tab_index].textContent ;
+            const resultElement1 = document.querySelector("#result-2");
+            const fontSizeNumeric = parseFloat(window.getComputedStyle(resultElement1).fontSize);
+            
+            // Set the --base-font-size variable using document.documentElement
+            document.documentElement.style.setProperty('--base-font-size', fontSizeNumeric + 'px');
+            
+            // Add 'shake' class to apply the animation
+            document.querySelector("#result-2").classList.add('shake');
+
+            // Remove 'shake' class after a delay (100 milliseconds in this case)
+            setTimeout(() => {
+                document.querySelector("#result-2").classList.remove('shake');
+            }, 100);
         }
         const resultElement = document.getElementById('result-1');
+        const result_1_font_size = parseFloat(window.getComputedStyle(resultElement).fontSize);
+            
+        // Set the --base-font-size variable using document.documentElement
+        document.documentElement.style.setProperty('--base-font-size', result_1_font_size + 'px');
         resultElement.classList.add('shake');
         setTimeout(() => {
             resultElement.classList.remove('shake');
@@ -62,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
             var tab = [20, 20, 33, 100, 100, 100];
             console.log(i) ;
             document.querySelector("#result-1").innerHTML = tab[i] * tab_salat[i].textContent;
+            document.querySelector("#result-2").innerHTML = tab_salat[i].textContent ;
             varCount = tab[i] * tab_salat[i].textContent;
             val_tab = tab[i] ;
             val_tab_index = i ;

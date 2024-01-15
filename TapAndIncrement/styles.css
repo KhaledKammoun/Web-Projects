@@ -1,8 +1,11 @@
 /*Shake Animation*/
+:root {
+  --base-font-size: 100px; /* Set your default base font size here */
+}
 @keyframes shake {
   0%, 100% {
     
-    font-size: 100px;
+    font-size: var(--base-font-size);
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
     color:rgba(0, 0, 0, 0.781);
@@ -10,7 +13,7 @@
   50% {
     
 
-    font-size: 115px;
+    font-size: calc(var(--base-font-size) + 15px);
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     text-align: center;
     color:rgba(0, 0, 0, 0.781);
@@ -264,6 +267,30 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   position: fixed;
   left: 30%;
   bottom: 32%;
+  position: absolute;
+}
+#seperator-1{
+  margin-right: 10px;
+  position: fixed;
+  position: absolute;
+  top: 45%;
+  left: 78%;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 40px;
+  background-color: #0e2d3844;
+}
+#result-2{
+  width: 160px;
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color:rgba(0, 0, 0, 0.781);
+  position: fixed;
+  left: 65%;
+  bottom: 48%;
+  
   position: absolute;
 }
 /*Footer*/

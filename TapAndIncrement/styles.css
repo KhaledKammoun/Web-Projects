@@ -81,7 +81,6 @@ body {
     user-select: none;
     display: flex;
     flex-direction: column;
-
 }
 
 .button,.newDayButton {
@@ -161,7 +160,7 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   text-align: center;
 }
 .newDayButton  p{
-  color: rgb(12, 91, 122);
+  color: rgb(8, 70, 95);
   
   font-weight: bold;
   margin-top: 0.5em;
@@ -186,15 +185,15 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   background-color: #43abce;
   width: 400px;
   height: 400px;
-  border-radius: 6px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8); /* Initial scale and position */
-  border: 0.15em solid #16404e;
   z-index: 2;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease; /* Simplified transitions for opacity and transform */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
 }
 
 /* Add a class to show the content label */
@@ -212,17 +211,25 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
 
 #content_close{
   color: antiquewhite;
-  background-color: #16404e;
+  background-color: #39778b;
   width: 30px;
   height: 30px;
-  border-radius: 6px;
+  border-radius: 15px;
   top: 10px;
   right: 10px;
   position: absolute;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
+  transition: background-color 0.3s ease;
+  
+
 }
+
+#content_close:hover{
+  background-color: #185163;
+}
+
 #content_close > p::after {
   font-family:'Times New Roman', Times, serif;
   content: "\00d7";

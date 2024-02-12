@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
             adjustFontSizeToFit();
             showContentLabel();
             applyBlur() ;
-            var tab = [20, 20, 33, 100, 100, 100];
+            var tab = [20, 20, 33, 100, 20, 20];
             console.log(i) ;
             document.querySelector("#result-1").innerHTML = tab[i] * tab_salat[i].textContent;
             document.querySelector("#result-2").innerHTML = tab_salat[i].textContent ;

@@ -193,7 +193,7 @@ th:nth-child(3), td:nth-child(3),th:nth-child(4), td:nth-child(4) {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease; /* Simplified transitions for opacity and transform */
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 /* Add a class to show the content label */
